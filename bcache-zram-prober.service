@@ -1,0 +1,11 @@
+[Unit]
+Description=bcache zram prober
+Before=mnt-y.mount
+
+[Service]
+User=root
+WorkingDirectory=/
+ExecStart=/usr/bin/bcache-zram-prober
+
+[Install]
+WantedBy=multi-user.target
